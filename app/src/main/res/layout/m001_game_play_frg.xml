@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game_play">
+
+    <LinearLayout
+        android:id="@+id/ln_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_game_play"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/purple_dark">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_avatar"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ProgressBar
+                    android:id="@+id/progress_time"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@drawable/bg_progressbar_time"
+                    android:indeterminateDuration="3000" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="30"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical|end"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_money"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/bt_stop_game"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:src="@drawable/ic_help_stop"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/bt_change_question"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:src="@drawable/ic_help_change_question"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/bt_help_5050"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:src="@drawable/ic_help_5050"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/bt_help_audience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:src="@drawable/ic_help_audience"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/bt_help_call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:src="@drawable/ic_help_call"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_bg_question"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:paddingHorizontal="40dp"
+                android:text="@string/txt_demo_question"
+                android:textColor="@color/orange_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_number_question"
+                android:layout_width="260dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/ic_bg_number_question"
+                android:gravity="center"
+                android:text="Câu: 1"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/bt_answer_a"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_bg_answer"
+                android:gravity="center_vertical"
+                android:paddingStart="60dp"
+                android:text="A: Kim cương"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/bt_answer_b"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_bg_answer"
+                android:gravity="center_vertical"
+                android:paddingStart="60dp"
+                android:text="B: Vàng"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/bt_answer_c"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_bg_answer"
+                android:gravity="center_vertical"
+                android:paddingStart="60dp"
+                android:text="C: Bạc"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/bt_answer_d"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_bg_answer"
+                android:gravity="center_vertical"
+                android:paddingStart="60dp"
+                android:text="D: Đồng"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/include_bonus_level"
+        layout="@layout/view_bonus_level"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginStart="-64dp" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
